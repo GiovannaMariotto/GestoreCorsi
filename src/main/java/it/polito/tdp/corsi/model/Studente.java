@@ -10,7 +10,7 @@ public class Studente {
 	
 	@Override
 	public String toString() {
-		return "Studente [matricola=" + matricola + ", nome=" + nome + ", cognome=" + cognome + ", CDS=" + CDS + "]";
+		return this.matricola+", "+this.nome+"  "+this.cognome+", "+this.CDS;
 	}
 	public Studente(Integer matricola, String nome, String cognome, String cDS) {
 		super();
