@@ -13,7 +13,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.corsi.FXMLController">
    <bottom>
-      <TextArea fx:id="txtRisultato" prefHeight="300.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TextArea fx:id="txtRisultato" disable="true" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets top="20.0" />
          </BorderPane.margin>
