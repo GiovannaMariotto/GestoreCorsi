@@ -25,7 +25,7 @@ public class CorsoDAO {
 		List<Corso> result = new ArrayList<Corso>();
 		
 		try {
-			Connection conn = DBConnection.getConnection();
+			Connection conn = DBConnect.getConnection();
 			PreparedStatement pt =  conn.prepareStatement(sql);
 			pt.setInt(1,periodo);
 			ResultSet rs = pt.executeQuery();
@@ -53,7 +53,7 @@ public class CorsoDAO {
 		Map<Corso, Integer> result = new HashMap<>();
 		
 		try {
-			Connection conn = DBConnection.getConnection();
+			Connection conn = DBConnect.getConnection();
 			PreparedStatement st = conn.prepareStatement(sql);
 			st.setInt(1,periodo);
 			ResultSet rs = st.executeQuery();
@@ -81,7 +81,7 @@ public class CorsoDAO {
 				+ "AND i.codins = ? ";
 		List<Studente> result = new LinkedList<Studente>();
 		try {
-			Connection conn= DBConnection.getConnection();
+			Connection conn= DBConnect.getConnection();
 			PreparedStatement st= conn.prepareStatement(sql);
 			st.setString(1,corso.getCodins());
 			ResultSet rs = st.executeQuery();
@@ -104,7 +104,7 @@ public class CorsoDAO {
 	public boolean esisteCorso(String codice) {
 		String sql = "SELECT * FROM corso WHERE codins=?";
 		try {
-			Connection conn= DBConnection.getConnection();
+			Connection conn= DBConnect.getConnection();
 			PreparedStatement st= conn.prepareStatement(sql);
 			st.setString(1,codice);
 			ResultSet rs = st.executeQuery();
@@ -132,7 +132,7 @@ public class CorsoDAO {
 				+ "GROUP BY s.CDS ";
 		Map<String,Integer> result = new HashMap<String,Integer>();
 		try {
-			Connection conn = DBConnection.getConnection();
+			Connection conn = DBConnect.getConnection();
 			PreparedStatement  st = conn.prepareStatement(sql);
 			st.setString(1,corso.getCodins());
 			ResultSet rs = st.executeQuery();

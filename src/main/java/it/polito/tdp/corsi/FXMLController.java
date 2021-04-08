@@ -53,6 +53,7 @@ public class FXMLController {
     void corsiPerPeriodo(ActionEvent event) {
     	
     	txtRisultato.clear();
+    	this.txtRisultato.setDisable(false);
     	
     	String periodoString = txtPeriodo.getText();
     	Integer periodo;
@@ -124,7 +125,7 @@ public class FXMLController {
 
     @FXML
     void stampaStudenti(ActionEvent event) {
-    	
+    	this.txtRisultato.setDisable(false);
     	this.txtRisultato.clear();
     	String codice = txtCorso.getText();
     	if(!model.esisteCorso(codice)) {
@@ -146,7 +147,7 @@ public class FXMLController {
     
     @FXML
     void stampaDivisione(ActionEvent event) {
-
+    	this.txtRisultato.setDisable(false);
     	this.txtRisultato.clear();
     	String codice = txtCorso.getText();
     	if(!model.esisteCorso(codice)) {
