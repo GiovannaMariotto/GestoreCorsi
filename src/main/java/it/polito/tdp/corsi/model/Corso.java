@@ -63,7 +63,7 @@ public class Corso { //Classe JAVA BEAN
 
 	@Override
 	public String toString() {
-		return "Corso [codins=" + codins + ", crediti=" + crediti + ", nome=" + nome + ", pd=" + pd + "]";
+		return ""+this.codins + "- "+ this.nome +", "+ this.crediti   + " , " + pd ;
 	}
 
 	@Override
